@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="range"] {
+    -webkit-appearance: none;
+
+    padding: 0.7rem 0.3rem;
+    border-radius: 999px;
+    background-size: 70% 100%;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 640px) {
+    input[type="range"]::-webkit-slider-thumb {
+        height: 25px;
+        width: 25px;
+    }
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: rgba(195, 68, 52, 255);
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background 0.3s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+@layer utilities {
+    .padding-LR {
+        @apply px-6;
+    }
+    .padding-TB {
+        @apply py-6;
+    }
+    .contain-margin {
+        @apply mx-5;
+    }
+    .margin-T {
+        @apply mt-5;
+    }
+}
