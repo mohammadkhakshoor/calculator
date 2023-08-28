@@ -37,7 +37,9 @@ input[type="range"]::-webkit-slider-runnable-track {
     border: none;
     background: transparent;
 }
-
+body {
+    overflow: hidden;
+}
 @layer utilities {
     .padding-LR {
         @apply px-6;
@@ -51,4 +53,10 @@ input[type="range"]::-webkit-slider-runnable-track {
     .margin-T {
         @apply mt-5;
     }
+    .btns {
+        @apply -bg-milky flex p-4  max-h-[4.5rem] items-center justify-center rounded-md text-3xl font-bold hover:-bg-redish-orange transition-all;
+    }
+}
+.min-h {
+    min-height: 100dvh;
 }
