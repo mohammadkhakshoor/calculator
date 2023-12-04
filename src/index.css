@@ -5,61 +5,84 @@
 @tailwind components;
 @tailwind utilities;
 
-input[type="range"] {
-    -webkit-appearance: none;
+.main-theme {
+  --mainBackground: rgba(59, 70, 100, 255);
+  --numberBackground: rgba(234, 227, 219, 255);
+  --numberHover: rgb(231, 84, 65);
+  --btnContainer: hsl(224, 36%, 15%);
+  --btnColor: black;
+}
+.second-theme {
+  --mainBackground: rgb(231, 231, 230);
+  --numberBackground: #e7e5e1;
+  --numberHover: rgb(60, 130, 132);
+  --btnContainer: rgb(212, 205, 205);
+  --btnColor: black;
+}
+.third-theme {
+  --mainBackground: rgb(23, 6, 42);
+  --numberBackground: rgb(51, 27, 76);
+  --numberHover: rgb(85, 10, 124);
+  --btnContainer: rgb(12, 8, 17);
+  --btnColor: rgb(244, 218, 104);
+}
 
-    padding: 0.7rem 0.3rem;
-    border-radius: 999px;
-    background-size: 70% 100%;
-    background-repeat: no-repeat;
+input[type="range"] {
+  -webkit-appearance: none;
+
+  padding: 0.7rem 0.3rem;
+  border-radius: 999px;
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 640px) {
-    input[type="range"]::-webkit-slider-thumb {
-        height: 25px;
-        width: 25px;
-    }
+  input[type="range"]::-webkit-slider-thumb {
+    height: 25px;
+    width: 25px;
+  }
 }
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 14px;
-    width: 14px;
-    border-radius: 50%;
-    background: rgba(195, 68, 52, 255);
-    cursor: pointer;
-    box-shadow: 0 0 2px 0 #555;
-    transition: background 0.3s ease-in-out;
+  -webkit-appearance: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: rgba(195, 68, 52, 255);
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background 0.3s ease-in-out;
 }
 p {
-    color: #c34434;
+  color: #c34434;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-    -webkit-appearance: none;
-    box-shadow: none;
-    border: none;
-    background: transparent;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
 }
 body {
-    overflow: hidden;
+  overflow: hidden;
 }
 @layer utilities {
-    .padding-LR {
-        @apply px-6;
-    }
-    .padding-TB {
-        @apply py-6;
-    }
-    .contain-margin {
-        @apply mx-5;
-    }
-    .margin-T {
-        @apply mt-5;
-    }
-    .btns {
-        @apply -bg-milky flex p-4  max-h-[4.5rem] items-center justify-center rounded-md text-3xl font-bold hover:-bg-redish-orange transition-all;
-    }
+  .padding-LR {
+    @apply px-6;
+  }
+  .padding-TB {
+    @apply py-6;
+  }
+  .contain-margin {
+    @apply mx-5;
+  }
+  .margin-T {
+    @apply mt-5;
+  }
+  .btns {
+    @apply bg-numberBackground text-btnColor flex p-4  max-h-[4.5rem] items-center justify-center rounded-md text-3xl font-bold hover:bg-numberHover transition-all;
+  }
 }
+
 .min-h {
-    min-height: 100dvh;
+  min-height: 100dvh;
 }
